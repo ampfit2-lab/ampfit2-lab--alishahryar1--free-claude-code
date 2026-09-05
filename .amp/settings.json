@@ -1,0 +1,163 @@
+{
+  "amp.permissions": [
+    {
+      "tool": "Bash",
+      "action": "reject",
+      "matches": {
+        "cmd": [
+          "gh pr create*",
+          "gh pr merge*",
+          "gh pr *",
+          "gh merge*",
+          "gh issue*",
+          "gh api*",
+          "gh repo*",
+          "gh search*",
+          "gh auth*",
+          "git push *--force*",
+          "git push *-f *",
+          "git push * lab-base*",
+          "git push *HEAD:lab-base*",
+          "git push *refs/heads/lab-base*",
+          "git push *--all*",
+          "git push *--mirror*",
+          "git checkout lab-base*",
+          "git checkout -B lab-base*",
+          "git switch lab-base*",
+          "git switch -c lab-base*",
+          "git merge *lab-base*",
+          "git rebase *lab-base*",
+          "git remote add*",
+          "git remote set-url*",
+          "git remote remove*",
+          "git remote rename*",
+          "git clone *github.com*",
+          "curl *api.github.com*",
+          "wget *api.github.com*",
+          "python* *api.github.com*"
+        ]
+      }
+    },
+    {
+      "tool": "Bash",
+      "action": "allow",
+      "matches": {
+        "cmd": [
+          "git status*",
+          "git diff*",
+          "git log*",
+          "git show*",
+          "git add*",
+          "git commit*",
+          "git fetch*",
+          "git stash*",
+          "git checkout amp-fit2/*",
+          "git switch amp-fit2/*",
+          "git push -u origin amp-fit2/*",
+          "git push origin amp-fit2/*",
+          "python3 .agents/gh_repo_guard.py pr create*",
+          "pytest*",
+          "python -m pytest*",
+          "npm test*",
+          "npm run *",
+          "pnpm test*",
+          "pnpm run *",
+          "yarn test*",
+          "go test*",
+          "go build*",
+          "go vet*",
+          "cargo test*",
+          "cargo build*",
+          "cargo clippy*",
+          "mvn *",
+          "gradle *",
+          "./gradlew *",
+          "make *",
+          "pip install*",
+          "npm ci*",
+          "npm install*",
+          "pnpm install*",
+          "poetry *",
+          "uv *",
+          "ruff *",
+          "black *",
+          "mypy *",
+          "eslint *",
+          "tsc*",
+          "ls*",
+          "cat*",
+          "sed*",
+          "awk*",
+          "grep*",
+          "find*",
+          "head*",
+          "tail*",
+          "wc*",
+          "sort*",
+          "diff*",
+          "mkdir*",
+          "cp*",
+          "mv*",
+          "rm *",
+          "chmod*",
+          "env*",
+          "echo*",
+          "printf*",
+          "which*",
+          "pwd*",
+          "cd *"
+        ]
+      }
+    },
+    {
+      "tool": "Read",
+      "action": "allow"
+    },
+    {
+      "tool": "Grep",
+      "action": "allow"
+    },
+    {
+      "tool": "Glob",
+      "action": "allow"
+    },
+    {
+      "tool": "glob",
+      "action": "allow"
+    },
+    {
+      "tool": "edit_file",
+      "action": "allow"
+    },
+    {
+      "tool": "create_file",
+      "action": "allow"
+    },
+    {
+      "tool": "edit",
+      "action": "allow"
+    },
+    {
+      "tool": "create",
+      "action": "allow"
+    },
+    {
+      "tool": "apply_patch",
+      "action": "allow"
+    },
+    {
+      "tool": "oracle",
+      "action": "allow"
+    },
+    {
+      "tool": "*",
+      "action": "reject"
+    }
+  ],
+  "amp.tools.disable": [
+    "web_search",
+    "read_web_page",
+    "painter",
+    "librarian"
+  ]
+}
